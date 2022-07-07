@@ -24,6 +24,17 @@
 	align-items: center;
 }
 
+.post__btns {
+	display: flex;
+}
+
+.post__about {
+	display: flex;
+	width: 800px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
 
 .post-enter {
 	transform: translateX(-350px);
@@ -62,7 +73,7 @@
 
 .navbar {
 	height: 50px;
-	width: 100vh;
+	width: 800px;
 	display: flex;
 	justify-content: right;
 	background: lightseagreen;
@@ -71,10 +82,15 @@
 
 .navbar__links {
 	color: white;
-	padding: 0 15px;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
+	margin: 0 15px;
+	padding: 5px 15px;
+	font-size: 14px;
+	background: transparent;
+	border: 1px solid white;
+	cursor: pointer;
 }
 
 .error {
