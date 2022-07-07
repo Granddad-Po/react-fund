@@ -28,12 +28,12 @@
 	display: flex;
 }
 
-.post__about {
+.postId__wrapper {
 	display: flex;
 	width: 800px;
-	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	padding: 5px;
 }
 
 .post-enter {
