@@ -93,6 +93,18 @@
 	cursor: pointer;
 }
 
+.navbar__exit {
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 15px;
+	padding: 5px 15px;
+	font-size: 14px;
+	background: transparent;
+	border: 1px solid white;
+	cursor: pointer;
+}
+
 .error {
 	display: flex;
 	justify-content: center;

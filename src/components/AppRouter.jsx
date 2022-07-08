@@ -1,22 +1,37 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Navbar from "./UI/Navbar/Navbar";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Error from "../pages/Error";
-import {routes} from "../routes/routes";
+import {privateRoutes, publicRoutes} from "../routes/routes";
+import Login from "../pages/Login";
+import {AuthContext} from "../context";
 
 const AppRouter = () => {
+
+    const {isAuth} = useContext(AuthContext)
+
     return (
         <>
             <Router>
                 <Navbar/>
                 <Routes>
-                    {routes.map(route =>
-                        <Route
-                            path={route.path}
-                            element={<route.element/>}
-                        />
-                    )}
-                    <Route path="/*" element={<Error to="/error" replace/>}/>
+                    {isAuth
+                        ? privateRoutes.map(route =>
+                            <Route
+                                path={route.path}
+                                element={<route.element/>}
+                                key={route.path}
+                            />
+                        )
+
+                        : publicRoutes.map(route =>
+                            <Route
+                                path={route.path}
+                                element={<route.element/>}
+                                key={route.path}
+                            />
+                        )
+                    }
+                    <Route path="/*" element={<Login to="/login" replace/>}/>
                 </Routes>
             </Router>
         </>
