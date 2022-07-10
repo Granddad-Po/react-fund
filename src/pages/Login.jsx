@@ -13,11 +13,11 @@ const Login = () => {
     }
 
     return (
-        <form onSubmit={login}>
-            <h1>Авторизация</h1>
+        <form className={'login__form'} onSubmit={login}>
+            <h1 className={'login__text'}>Авторизация</h1>
             <MyInput type={'text'} placeholder={'Введите логин'}/>
             <MyInput type={'password'} placeholder={'Введите пароль'}/>
-            <MyButton onSubmit={() => login}>Войти</MyButton>
+            <MyButton style={{marginTop: 15}} onSubmit={() => login}>Войти</MyButton>
         </form>
     );
 };

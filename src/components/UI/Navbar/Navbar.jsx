@@ -17,7 +17,9 @@ const Navbar = () => {
                 <Link className={'navbar__links'} to="/posts">Посты</Link>
                 <Link className={'navbar__links'} to="/about">О сайте</Link>
             </div>
-            <MyButton onClick={logout}>Выйти</MyButton>
+            <MyButton
+                style={{marginRight: 15, color: 'white', border: '1px solid white', textTransform: 'uppercase', fontWeight: 'bold'}}
+                onClick={logout}>Выйти</MyButton>
         </div>
     );
 };
