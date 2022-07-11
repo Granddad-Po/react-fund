@@ -6,6 +6,9 @@
 
 #root {
 	display: flex;
+	max-width: 800px;
+	margin: 0 auto;
+
 	flex-direction: column;
 	align-items: center;
 }
@@ -13,6 +16,7 @@
 .App {
 	width: 800px;
 	margin-bottom: 30px;
+	padding: 0 15px;
 }
 
 .login__form {
@@ -44,7 +48,7 @@
 	width: 800px;
 	align-items: center;
 	flex-direction: column;
-	padding: 5px;
+	padding: 5px 15px;
 }
 
 .post-enter {
@@ -128,3 +132,83 @@
 	text-transform: uppercase;
 	font-weight: bold;
 }
+
+/*=============== BREAKPOINTS ===============*/
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+	.root {
+		margin: 0;
+	}
+	.App {
+		width: 100%;
+	}
+	.navbar {
+		width: 100%;
+	}
+	.postId__wrapper {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.App {
+		width: 100%;
+	}
+	.navbar {
+		width: 100%;
+	}
+	.postId__wrapper {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.App {
+		width: 100%;
+	}
+	.navbar {
+		width: 100%;
+	}
+	.post {
+		flex-direction: column;
+		gap: 15px;
+	}
+	.post__btns {
+		width: 100%;
+		justify-content: space-around;
+	}
+	.login__form {
+		width: 100%;
+		padding: 0 15px;
+	}
+	.postId__wrapper {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.App {
+		width: 100%;
+	}
+	.navbar {
+		width: 100%;
+	}
+	.page__wrapper {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 340px) {
+
+}
+
+
+
+
+
+
+

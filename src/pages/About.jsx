@@ -2,8 +2,8 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div>
-            Page for example
+        <div style={{marginTop: 15, fontWeight: 'bold'}}>
+            Project for practice and consolidation of theory
         </div>
     );
 };
