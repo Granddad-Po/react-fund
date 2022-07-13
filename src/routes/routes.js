@@ -12,4 +12,5 @@ export const privateRoutes = [
 export const publicRoutes = [
     {path: '/login', element: Login},
     {path: '/about', element: About},
+    {path: '/*', element: Login},
 ]
