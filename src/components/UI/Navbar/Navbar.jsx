@@ -4,7 +4,7 @@ import MyButton from "../button/MyButton";
 import {AuthContext} from "../../../context";
 
 const Navbar = () => {
-    const {setIsAuth} = useContext(AuthContext)
+    const {isAuth, setIsAuth} = useContext(AuthContext)
 
     const logout = () => {
         setIsAuth(false)
@@ -17,9 +17,17 @@ const Navbar = () => {
                 <Link className={'navbar__links'} to="/posts">Посты</Link>
                 <Link className={'navbar__links'} to="/about">О сайте</Link>
             </div>
+            {isAuth &&
             <MyButton
-                style={{marginRight: 15, color: 'white', border: '1px solid white', textTransform: 'uppercase', fontWeight: 'bold'}}
+                style={{
+                    marginRight: 15,
+                    color: 'white',
+                    border: '1px solid white',
+                    textTransform: 'uppercase',
+                    fontWeight: 'bold'
+                }}
                 onClick={logout}>Выйти</MyButton>
+            }
         </div>
     );
 };

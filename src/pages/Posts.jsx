@@ -4,7 +4,6 @@ import PostFilter from "../components/PostFilter";
 import PostList from "../components/PostList";
 import MyButton from "../components/UI/button/MyButton";
 import MyModal from "../components/UI/MyModal/MyModal";
-import Pagination from "../components/UI/Pagination/Pagination";
 import PostForm from "../components/UI/PostForm";
 import '../styles/App.css';
 import PostService from "../API/PostService";
@@ -49,11 +48,6 @@ function Posts() {
         setPosts(posts.filter(p => p.id !== post.id))
     }
 
-    const changePage = (page) => {
-        setPage(page)
-        fetchPosts(limit, page)
-    }
-
     return (
         <div className="App">
             <MyButton onClick={() => setModal(true)} style={{marginTop: 30}}>
@@ -85,11 +79,6 @@ function Posts() {
                 isPostsLoading &&
                 <div style={{display: 'flex', justifyContent: 'center', marginTop: 50}}><Loader/></div>
             }
-            <Pagination
-                page={page}
-                changePage={changePage}
-                totalPages={totalPages}
-            />
         </div>
     );
 }
